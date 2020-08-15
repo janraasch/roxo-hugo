@@ -2,13 +2,20 @@
   <meta charset="utf-8" />
   <title>{{ .Title }}</title>
 
-  {{ "<!-- mobile responsive meta -->" | safeHTML }}
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  {{ with .Site.Params.author }}
-  <meta name="author" content="{{ . }}">
-  {{ end }}
-  {{ hugo.Generator }}
+
+  {{ with .Site.Params.favicon }}<link rel="shortcut icon" href="{{ . | absURL }}" type="image/png"/>{{ end }}
+
+  {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+  {{ with .Site.Params.description }}<meta name="description" content="{{ . }}" />{{ end }}
+  {{ with .Site.Params.meta.keywords }}<meta name="keywords" content="{{ . }}" />{{ end }}
+
+  <meta name="referrer" content="no-referrer-when-downgrade" />
+
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
+  {{ template "_internal/schema.html" . }}
 
   {{ "<!-- Bootstrap -->" | safeHTML }}
   {{ $bootstrap := resources.Get "css/bootstrap.css" | minify }}
@@ -18,8 +25,4 @@
   {{ "<!-- Main Stylesheets -->" | safeHTML }}
   {{ $style := resources.Get "scss/style.scss" | resources.ToCSS | minify }}
   <link href="{{ $style.Permalink }}" rel="stylesheet" />
-
-  <!--Favicon-->
-  <link rel="shortcut icon" href="{{ "images/favicon.png" | absURL }}" type="image/x-icon" />
-  <link rel="icon" href="{{ "images/favicon.ico" | absURL }}" type="image/x-icon" />
 </head>

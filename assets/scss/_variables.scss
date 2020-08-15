@@ -1,16 +1,27 @@
 //site color variables
-$body-color: #fff;
-$primary-color: #EAA4A4;
-$secondary-color: #ADD6D2;
+
+$ivory: rgb(248,244,230);
+$nachtblau: #00113E;
+$orange: rgb(255,81,0);
+$green: rgb(124,195,117);
+$hellblau: rgb(108,190,255);
+
+$body-color: $ivory;
+$primary-color: $orange;
+$secondary-color: $green;
 $text-color: #9D9EA5;
-$text-color-dark: #00113E;
+$text-color-dark: $nachtblau;
 $site-ease: cubic-bezier(0.36, 0.03, 0, 0.91);
-$gray: #F7F9FF;
+$gray: $hellblau; // #F7F9FF;
 $dark-gray: #646569;
 
 // solid colors
 $white: #fff;
 $black: #000;
+
+$site-navigation-color: $white;
+$site-counter-color: $white;
+$site-counter-background-color: $secondary-color;
 
 // Font Variables
 $primary-font: 'Josefin Sans', sans-serif;

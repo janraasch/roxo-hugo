@@ -14,8 +14,13 @@
     padding: 150px 0;
   }
   &-content{
+    h6{
+      color: $white
+    }
     h1{
       margin-bottom: 75px;
+      color: $white;
+      // background-color: rgba(255, 255, 255, 0.5);
       @include desktop-lg{
         font-size: 50px;
         margin-bottom: 50px;

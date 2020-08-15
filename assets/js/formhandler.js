@@ -1,40 +1,24 @@
-window.addEventListener("DOMContentLoaded", function() {    
-  var form = document.getElementById("contact-form");
+window.addEventListener("DOMContentLoaded", function() {
+  var form = document.getElementById("kontakt");
+  var $form = $(form);
   var button = document.getElementById("contact-form-button");
   var status = document.getElementById("contact-form-status");
 
   function success() {
-    form.reset();
-    button.style = "display: none ";
-    status.innerHTML = "Thanks! Contact form is submitted successfully.";
+    status.innerHTML = status.dataset.success
   }
 
   function error() {
-    status.innerHTML = "Oops! There was a problem.";
+    button.style = "";
+    status.innerHTML = status.dataset.error
   }
 
   // handle the form submission event
+  // see https://docs.netlify.com/forms/setup/#submit-forms-via-ajax
 
-  form.addEventListener("submit", function(ev) {
-    ev.preventDefault();
-    var data = new FormData(form);
-    ajax(form.method, form.action, data, success, error);
+  form.addEventListener("submit", function(event) {
+    button.style = "display: none";
+    event.preventDefault();
+    $.post($form.attr("action"), $form.serialize()).done(success).fail(error);
   });
 });
-
-// helper function for sending an AJAX request
-
-function ajax(method, url, data, success, error) {
-  var xhr = new XMLHttpRequest();
-  xhr.open(method, url);
-  xhr.setRequestHeader("Accept", "application/json");
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState !== XMLHttpRequest.DONE) return;
-    if (xhr.status === 200) {
-      success(xhr.response, xhr.responseType);
-    } else {
-      error(xhr.status, xhr.response, xhr.responseType);
-    }
-  };
-  xhr.send(data);
-}

@@ -2,6 +2,10 @@
   background: $secondary-color;
   padding: 100px 0;
   &-logo{
+    color: $white;
+    a {
+      color: $white;
+    }
     margin-bottom: 50px;
     @include mobile{
       text-align: center;

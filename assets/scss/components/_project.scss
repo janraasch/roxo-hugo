@@ -1,4 +1,9 @@
 .site-project{
+
+  p {
+    color: $text-color-dark;
+  }
+
   padding: 120px 0;
   overflow: hidden;
   &-item{
@@ -54,7 +59,7 @@
       }
     }
     &:hover{
-      box-shadow: 
+      box-shadow:
       0px 30px 45px 0px rgba(0, 0, 0, 0.01),
       0px 30px 45px 0px rgba(0, 0, 0, 0.02),
       0px 30px 45px 0px rgba(0, 0, 0, 0.03),

@@ -1,12 +1,15 @@
 .site-counter{
   padding: 85px 0;
-  color: $white;
-  background: $secondary-color;
+  color: $site-counter-color;
+  background: $site-counter-background-color;
   .section-title{
     margin-bottom: 40px;
   }
   @include mobile{
     padding: 50px 0;
+  }
+  &-headline{
+    color: $site-counter-color;
   }
   &-item{
     @include desktop{
@@ -18,7 +21,7 @@
       font-weight: 300;
     }
     &-number{
-      color: $white;
+      color: $site-counter-color;
       font-size: 60px;
       margin-bottom: 0;
       font-weight: 700;

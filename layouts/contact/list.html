@@ -10,34 +10,28 @@
       <div class="col-lg-6 ml-auto">
         <div class="site-contact-form">
           <h4>{{ .Params.form_heading }}</h4>
-          <form id="contact-form" action="{{ .Site.Params.formspreeFormUrl }}" method="POST">
+          <form id="kontakt" netlify>
             <div class="row">
               <div class="col-lg-6">
-                <input type="text" class="form-control" name="first-name" id="first-name" placeholder="First Name">
+                <input type="text" class="form-control" name="Vorname" id="first-name" placeholder="Vorname">
               </div>
               <div class="col-lg-6">
-                <input type="text" class="form-control" name="last-name" id="last-name" placeholder="Last Name">
+                <input type="text" class="form-control" name="Nachname" id="last-name" placeholder="Nachname">
               </div>
               <div class="col-lg-6">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                <input type="email" class="form-control" name="E-mail-Adresse" id="email" placeholder="E-mail-Adresse" required>
               </div>
               <div class="col-lg-6">
-                <div class="select-wrapper">
-                  <select class="form-control" id="projectType" name="project-type">
-                    <option value="" selected disabled hidden>Project Type</option>
-                    <option value="gd">Graphics Design</option>
-                    <option value="wb">Web Design</option>
-                  </select>
-                </div>
+                <input type="tel" class="form-control" name="Telefon" id="tel" placeholder="Telefon">
               </div>
               <div class="col-12">
-                <textarea class="form-control" id="aboutProject" name="about-project" rows="6" placeholder="About the Project"></textarea>
+                <textarea class="form-control" id="text" name="Text" rows="6" placeholder="Über deinen Hund"></textarea>
               </div>
               <div class="col-12">
                 <button type="submit" class="btn btn-primary" id="contact-form-button">
                   <span class="btn-area">
-                    <span data-text="Send Message">
-                      Send Message
+                    <span data-text="Anfrage senden">
+                      Anfrage senden
                     </span>
                   </span>
                 </button>

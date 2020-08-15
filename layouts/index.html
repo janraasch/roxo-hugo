@@ -4,7 +4,17 @@
 
 {{ partial "counter.html" . }}
 
-{{ partial "portfolio.html" . }}
+<section class="site-project" id="project">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section-title">
+            {{ .Content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 {{ partial "testimonial.html" . }}
 

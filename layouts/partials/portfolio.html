@@ -6,25 +6,10 @@
         <div class="col-12">
           <div class="section-title">
             <h2>{{ .title }}</h2>
-            <p>{{ .subtitle }}</p>
+            <p>Ich freue mich, dass dich das Thema Ernährung beschäftigt und du darüber nachdenkst, dich dabei professionell unterstützen zu lassen. Neben der Vielzahl an Informationen, die heutzutage im Internet herumwirren, ist es nicht einfach herauszufinden, was für dich oder deinen Hund wirklich gut und das Richtige ist. Dabei möchte ich dir gerne helfen!</p>
+            <p>Ich gestalte meine Beratung ganzheitlich, denn oft spielt nicht nur die Ernährung allein eine wichtige Rolle. Auch weitere Einflüsse können dazu führen, dass es uns oder unserem Hund nicht gut geht und die Gesundheit beeinflussen.</p>
+            <p>Für die Beratung treffen wir uns online, bei dir zu Hause oder draußen. Auch ein telefonisches Beratungsgespräch ist möglich. Wir schauen, womit du dich am wohlsten fühlst und was für dich am besten funktioniert.</p>
           </div>
-        </div>
-        {{ range first 4 (where $.Site.RegularPages "Type" "portfolio") }}
-        <div class="col-lg-6 col-md-10 mx-auto">
-          <div class="site-project-item">
-            <div class="site-project-item-thumb">
-              <img src="{{ .Params.Image | absURL }}" alt="project-thumb">
-            </div>
-            <div class="site-project-item-content">
-              <span>{{ delimit .Params.category ", " }}</span>
-              <h3>{{ .Title }}</h3>
-              <a href="{{ .Permalink }}" class="read-more">view project</a>
-            </div>
-          </div>
-        </div>
-        {{ end }}
-        <div class="col-12 text-center text-lg-left">
-          <a href="portfolio" class="site-project-cta">MORE WORKS</a>
         </div>
       </div>
     </div>

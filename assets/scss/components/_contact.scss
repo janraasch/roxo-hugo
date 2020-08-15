@@ -1,6 +1,16 @@
 .site-contact{
+  .form-control {
+    color: $text-color-dark;
+  }
+  .form-control::placeholder {
+    color: $text-color-dark;
+  }
+  #contact-form-status {
+    color: $text-color-dark;
+  }
   padding: 150px 0 100px;
-  background: $gray;
+  background-color: $body-color;
+  color: $text-color-dark;
   @include mobile{
     padding: 120px 0 100px;
   }

@@ -1,6 +1,7 @@
+// TODO: Es gibt hier anscheinen keinen aktiven Zustand. Isi will gerne das dann die SChriftfarbe orange ist
 .site-navigation{
   padding: 20px 0;
-  background: $white;
+  background: $site-navigation-color;
   position: fixed;
   top: 0;
   width: 100%;
@@ -18,10 +19,12 @@
     padding: 15px;
   }
   .navbar-brand{
+    font-family: montserrat,sans-serif;
+    color: $text-color-dark;
     padding: 0;
     margin: 0;
     img{
-      max-width: 78px;
+      max-width: 100  px;
     }
   }
   .nav-item{
