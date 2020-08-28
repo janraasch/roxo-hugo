@@ -64,7 +64,7 @@
   background: $primary-color;
   color: $white;
   &:hover{
-    background: darken($color: $primary-color, $amount: 10);
+    background: lighten($color: $primary-color, $amount: 5);
   }
 }
 
