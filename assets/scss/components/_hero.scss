@@ -13,11 +13,6 @@
   @include mobile{
     padding: 150px 0;
   }
-  &-container {
-    @include tablet{
-      max-width: inherit;
-    }
-  }
   &-content{
     h6{
       color: $white
