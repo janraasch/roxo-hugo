@@ -1,0 +1,46 @@
+.site-anamnesebogen{
+    .form-control {
+      color: $text-color-dark;
+    }
+    .form-control::placeholder {
+      color: $text-color-dark;
+    }
+    form label {
+      color: $text-color-dark;
+      font-weight: 100;
+    }
+    #contact-form-status {
+      color: $text-color-dark;
+    }
+    padding: 150px 0 100px;
+    background-color: $body-color;
+    color: $text-color-dark;
+    @include mobile{
+      padding: 120px 0 100px;
+    }
+    &-title{
+      font-weight: 700;
+      @include tablet{
+        font-size: 40px;
+      }
+      span{
+        color: $primary-color;
+      }
+    }
+    &-form{
+      margin-top: 20px;
+      h4{
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+        letter-spacing: 3px;
+        @include tablet{
+          font-size: 20px;
+        }
+        @include desktop{
+          margin-bottom: 70px;
+        }
+      }
+    }
+  }
+  
